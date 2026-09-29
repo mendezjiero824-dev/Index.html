@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4f8">
+<title>Annie & Jiero — Our First Anniversary ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+:root {
+  --pink:#e98fb0; --deep:#8c4864; --cream:#fff9fb; --ink:#4c3440; --line:#f1dce5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background:
+radial-gradient(circle at 10% 10%,#ffd8e6 0 2px,transparent 3px),
+radial-gradient(circle at 90% 30%,#ffd8e6 0 2px,transparent 3px);
+background-size:90px 90px;z-index:-1}
+a{color:inherit}
+.hero{min-height:100vh;display:grid;place-items:center;padding:32px 18px;position:relative;overflow:hidden}
+.hero-inner{max-width:900px;text-align:center}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;color:var(--deep);font-weight:600}
+h1{font-family:"Playfair Display",serif;font-size:clamp(3.2rem,12vw,7.2rem);line-height:.9;margin:18px 0 20px;color:#5b3545}
+h1 span{display:block;color:var(--pink)}
+.subtitle{font-size:1.05rem;max-width:620px;margin:0 auto 28px;line-height:1.8}
+.date{display:inline-flex;gap:10px;align-items:center;padding:11px 18px;border:1px solid var(--line);background:#fff;border-radius:999px;box-shadow:0 8px 30px #d98baa22}
+.heart{color:var(--pink);font-size:1.1rem}
+.btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{border:0;border-radius:999px;padding:12px 18px;background:#5b3545;color:white;text-decoration:none;cursor:pointer;font:inherit}
+.btn.alt{background:white;color:var(--deep);border:1px solid var(--line)}
+section{padding:85px 18px}
+.wrap{max-width:1040px;margin:auto}
+.section-title{font-family:"Playfair Display",serif;text-align:center;font-size:2.4rem;margin:0 0 10px}
+.section-note{text-align:center;color:#876875;margin:0 auto 38px;max-width:650px;line-height:1.7}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:680px;margin:25px auto 0}
+.count-box{background:white;border:1px solid var(--line);border-radius:20px;padding:18px 8px;text-align:center}
+.count-num{font-family:"Playfair Display",serif;font-size:2rem;color:var(--deep)}
+.count-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#9b7b88}
+.letter{background:white;border:1px solid var(--line);border-radius:28px;padding:clamp(25px,5vw,55px);box-shadow:0 18px 55px #9f5b7712;line-height:1.85;font-size:1.02rem}
+.letter .salute{font-family:"Playfair Display",serif;font-size:1.7rem;color:var(--deep);margin-bottom:24px}
+.letter .end{font-family:"Playfair Display",serif;font-size:1.4rem;color:var(--deep);text-align:right;margin-top:28px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.photo-card{padding:0;border:1px solid var(--line);background:#fff;border-radius:20px;overflow:hidden;cursor:pointer;box-shadow:0 10px 30px #9f5b7710;transition:.25s;position:relative}
+.photo-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #9f5b7720}
+.photo-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.photo-card span{display:block;padding:11px;font-size:.75rem;color:#8c6674}
+.timeline{display:grid;gap:14px;max-width:760px;margin:auto}
+.moment{display:flex;gap:18px;align-items:flex-start;background:white;border:1px solid var(--line);padding:18px;border-radius:18px}
+.dot{width:12px;height:12px;background:var(--pink);border-radius:50%;margin-top:6px;flex:none;box-shadow:0 0 0 6px #fce4ed}
+.moment h3{margin:0 0 5px;font-family:"Playfair Display",serif;color:var(--deep)}
+.moment p{margin:0;color:#755d67;line-height:1.65}
+.music{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;background:#fff0f5;border:1px solid var(--line);padding:18px;border-radius:22px;max-width:720px;margin:0 auto}
+.music small{color:#8a6875}
+footer{padding:60px 18px;text-align:center;color:#8c6876}
+footer strong{font-family:"Playfair Display",serif;color:var(--deep);font-size:1.25rem}
+.float-heart{position:absolute;font-size:22px;opacity:.5;animation:float 5s ease-in-out infinite}
+.f1{top:14%;left:8%} .f2{top:23%;right:10%;animation-delay:1s} .f3{bottom:16%;left:14%;animation-delay:2s} .f4{bottom:11%;right:15%;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
+#lightbox{position:fixed;inset:0;background:#27151fcc;display:none;place-items:center;padding:20px;z-index:20}
+#lightbox.show{display:grid}
+#lightbox img{max-width:min(100%,1000px);max-height:82vh;object-fit:contain;border-radius:16px;box-shadow:0 20px 80px #0008}
+.close{position:absolute;top:18px;right:20px;border:0;background:white;color:#5b3545;border-radius:50%;width:44px;height:44px;font-size:24px;cursor:pointer}
+.nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:#ffffffcc;color:#5b3545;border-radius:50%;width:46px;height:46px;font-size:22px;cursor:pointer}
+.prev{left:18px} .next{right:18px}
+@media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}.counter{grid-template-columns:repeat(2,1fr)}section{padding:65px 14px}}
+@media(max-width:430px){.gallery{grid-template-columns:1fr 1fr;gap:9px}.photo-card span{font-size:.65rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="float-heart f1">♡</div><div class="float-heart f2">♥</div>
+  <div class="float-heart f3">♡</div><div class="float-heart f4">♥</div>
+  <div class="hero-inner">
+    <div class="eyebrow">September 30, 2025 · September 30, 2026</div>
+    <h1>Annie <span>&amp;</span> Jiero</h1>
+    <p class="subtitle">One year of memories, laughter, little moments, and choosing each other. Happy anniversary, babyyy. ♡</p>
+    <div class="date"><span class="heart">♥</span><b>Our first anniversary</b><span class="heart">♥</span></div>
+    <div class="btns">
+      <a class="btn" href="#letter">Read my letter</a>
+      <a class="btn alt" href="#memories">Our memories</a>
+    </div>
+    <div class="counter" id="counter">
+      <div class="count-box"><div class="count-num" id="days">—</div><div class="count-label">days</div></div>
+      <div class="count-box"><div class="count-num" id="hours">—</div><div class="count-label">hours</div></div>
+      <div class="count-box"><div class="count-num" id="mins">—</div><div class="count-label">minutes</div></div>
+      <div class="count-box"><div class="count-num" id="secs">—</div><div class="count-label">seconds</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="letter">
+  <div class="wrap">
+    <h2 class="section-title">A little letter for you</h2>
+    <p class="section-note">From Jiero, with all my heart. 🥹💞</p>
+    <article class="letter">
+      <div class="salute">HAIII BABBYYY KOOO 💞</div>
+      HAIII BABBYYY KOO HAPPY HAPPYY ANNIVERSARY TO US BABBYY KO ❤️<br><br>TODAY IS OUR SPECIAL DAY BABBY AND MATAGAL KO NANG HINIHINTAY TONG ARAW NA ’TO, AND ETO NA YUNG ARAW NA HINIHINTAY KOOO BABBYY KOO.<br><br>I JUST WANNA SAY NA THANK YOU FOR ALWAYS BEING THERE, BABY. THANK YOU FOR ALL YOUR SACRIFICES. THANK YOU FOR LOVING ME ENDLESSLY, UNCONDITIONALLY, AND GENUINELY. I REALLY REALLY APPRECIATE IT PO, BABBYYY.<br><br>IM SO GRATEFUL NA DUMATING KA SA BUHAY KO AND YOU MADE ME THE HAPPIEST BOYFRIEND EVERR. THANK YOU FOR EVERYTHING YOU’VE DONE FOR ME. AND ALSO THANK YOU PO KASI AFTER MO MAKITA LAHAT NG BAD SIDE KO, TINANGGAP MO PA RIN PO AKO. AND THAT’S WHY I LOVE YOU.<br><br>HINDI KITA MINAHAL DAHIL SA KATAWAN MO OR SA ITSURA MO. MINAHAL KITA KUNG SINO KA, KUNG PAANO MO ’KO TINRATO, KUNG PAANO MO ’KO PINAHALAGAHAN, KUNG PAANO MO ’KO MINAHAL. KAYA GANON DIN KITA MAMAHALIN, BABBYY KO.<br><br>WALA NANG MAS GAGANDA PA SA’YO BABBYY KO KASI FOR ME IKAW LANG ANG PINAKAAA MAGANDANG BABAE SA BUONG MUNDO. IKAW AT IKAW LANG ANG BABYY KOOO. IKAW LANG ANG NAG-IISA KONG BABY.<br><br>WALA NANG IBA. MAHAL NA MAHAL KITA, ASAWA KO. I LOVE YOU ALWAYS, FROM THE MOON AND BACK, AND FROM THE BOTTOM OF MY HEART. AND I LOVE YOU MORE THAN ANYTHING. 🥹💞🫂<br><br>HAPPPIII HAPPPII ANNIVERSARY PO ULITT BABBYYY KOOOO. MWAAAAAAAA MWAAAAA MWAAAAA 😘🥹💞🫂
+      <div class="end">I love you always. From the moon and back. ♡<br>— Jiero</div>
+    </article>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="wrap">
+    <h2 class="section-title">Our little memories</h2>
+    <p class="section-note">Every picture is a tiny piece of our story. Tap a photo to see it bigger. ♡</p>
+    <div class="gallery"><button class="photo-card" onclick="openLightbox(0)">
+      <img src="photos/photo1.webp" alt="Our memory 1" loading="lazy">
+      <span>memory 01 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(1)">
+      <img src="photos/photo2.webp" alt="Our memory 2" loading="lazy">
+      <span>memory 02 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(2)">
+      <img src="photos/photo3.png" alt="Our memory 3" loading="lazy">
+      <span>memory 03 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(3)">
+      <img src="photos/photo4.png" alt="Our memory 4" loading="lazy">
+      <span>memory 04 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(4)">
+      <img src="photos/photo5.png" alt="Our memory 5" loading="lazy">
+      <span>memory 05 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(5)">
+      <img src="photos/photo6.webp" alt="Our memory 6" loading="lazy">
+      <span>memory 06 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(6)">
+      <img src="photos/photo7.webp" alt="Our memory 7" loading="lazy">
+      <span>memory 07 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(7)">
+      <img src="photos/photo8.webp" alt="Our memory 8" loading="lazy">
+      <span>memory 08 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(8)">
+      <img src="photos/photo9.webp" alt="Our memory 9" loading="lazy">
+      <span>memory 09 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(9)">
+      <img src="photos/photo10.webp" alt="Our memory 10" loading="lazy">
+      <span>memory 10 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(10)">
+      <img src="photos/photo11.webp" alt="Our memory 11" loading="lazy">
+      <span>memory 11 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(11)">
+      <img src="photos/photo12.webp" alt="Our memory 12" loading="lazy">
+      <span>memory 12 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(12)">
+      <img src="photos/photo13.png" alt="Our memory 13" loading="lazy">
+      <span>memory 13 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(13)">
+      <img src="photos/photo14.webp" alt="Our memory 14" loading="lazy">
+      <span>memory 14 ♡</span>
+    </button>
+<button class="photo-card" onclick="openLightbox(14)">
+      <img src="photos/photo15.webp" alt="Our memory 15" loading="lazy">
+      <span>memory 15 ♡</span>
+    </button></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Our song</h2>
+    <p class="section-note">“Just the Way You Are” — Bruno Mars</p>
+    <div class="music">
+      <span>🎵</span>
+      <b>Just the Way You Are</b>
+      <button class="btn alt" onclick="document.getElementById('musicInfo').scrollIntoView({behavior:'smooth'})">Music note</button>
+      <small id="musicInfo">For copyright reasons, this page doesn't include the commercial recording. Add your own legally obtained MP3 as <code>our-song.mp3</code> next to this file if you want a local player.</small>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">One year, and still you</h2>
+    <div class="timeline">
+      <div class="moment"><span class="dot"></span><div><h3>09 · 30 · 2025</h3><p>The day our story officially became ours.</p></div></div>
+      <div class="moment"><span class="dot"></span><div><h3>All the little moments</h3><p>The random games, silly screenshots, cuddles, laughs, and memories that made this year special.</p></div></div>
+      <div class="moment"><span class="dot"></span><div><h3>09 · 30 · 2026</h3><p>Our first anniversary — and another chapter for Annie &amp; Jiero. ♡</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Annie Cruz ♡ Jiero Escasinas</strong>
+  <p>Made with love for our first anniversary · 09/30/2026</p>
+</footer>
+
+<div id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="close" onclick="closeLightbox()">×</button>
+  <button class="nav prev" onclick="prevPhoto(event)">‹</button>
+  <img id="lightboxImg" src="" alt="Memory">
+  <button class="nav next" onclick="nextPhoto(event)">›</button>
+</div>
+
+<script>
+const photos = ["photos/photo1.webp",
+"photos/photo2.webp",
+"photos/photo3.png",
+"photos/photo4.png",
+"photos/photo5.png",
+"photos/photo6.webp",
+"photos/photo7.webp",
+"photos/photo8.webp",
+"photos/photo9.webp",
+"photos/photo10.webp",
+"photos/photo11.webp",
+"photos/photo12.webp",
+"photos/photo13.png",
+"photos/photo14.webp",
+"photos/photo15.webp"];
+let current = 0;
+function openLightbox(i) {
+  current=i;
+  document.getElementById('lightboxImg').src=photos[current];
+  document.getElementById('lightbox').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+  document.body.style.overflow='';
+}
+function nextPhoto(e) { e.stopPropagation(); current=(current+1)%photos.length; document.getElementById('lightboxImg').src=photos[current]; }
+function prevPhoto(e) { e.stopPropagation(); current=(current-1+photos.length)%photos.length; document.getElementById('lightboxImg').src=photos[current]; }
+document.addEventListener('keydown', e => {
+  if(e.key==='Escape') closeLightbox();
+  if(e.key==='ArrowRight') nextPhoto(e);
+  if(e.key==='ArrowLeft') prevPhoto(e);
+});
+
+// Countdown to the first anniversary.
+const target = new Date('2026-09-30T00:00:00+08:00').getTime();
+function tick() {
+  const diff=Math.max(0,target-Date.now());
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor(diff%86400000/3600000);
+  const m=Math.floor(diff%3600000/60000);
+  const s=Math.floor(diff%60000/1000);
+  document.getElementById('days').textContent=d;
+  document.getElementById('hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('mins').textContent=String(m).padStart(2,'0');
+  document.getElementById('secs').textContent=String(s).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+</script>
+</body>
+</html>
